@@ -1,1 +1,1 @@
-$l("div").attr("done","no");
+$l("div").attr("done","asd");
