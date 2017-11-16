@@ -19,5 +19,9 @@ $d(".add-todo").on("click", () => {
   newTodo.append(subButton);
   newTodo.addClass("todo-item");
   todoList.append(newTodo);
+});
 
+$d(".cleartodo-button").on("click", () => {
+  debugger
+  $d('.todo-list').empty();
 });
