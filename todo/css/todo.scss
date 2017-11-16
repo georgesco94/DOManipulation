@@ -3,7 +3,9 @@ html, body{
   margin: 0;
   padding: 0;
 }
-
+body{
+  height: 2000px;
+}
 
 .addTask-button {
   padding: 0;
@@ -11,6 +13,13 @@ html, body{
   padding: 10px;
   background-color: white;
   border: 1px solid lightgray;
+}
+.add-div {
+  position: relative;
+}
+.add-div-content {
+  display: none;
+  position: absolute;
 }
 
 h1{
@@ -31,7 +40,7 @@ h1{
 }
 .todo-list {
   background-color: #2b406e;
-  width: 50%;
+  width: 80%;
   margin: auto;
   margin-top: 40px;
   margin-bottom: 15px;
@@ -42,11 +51,18 @@ h1{
   margin-bottom: 15px;
 }
 
-
 .hidden {
   display: none;
 }
 
 .shown {
   display: block;
+}
+
+.content {
+  display: flex;
+}
+.todo-index {
+  width: 70%;
+  
 }

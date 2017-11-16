@@ -14,8 +14,10 @@
       <nav class="nav-bar">
         <div class="add-div">
           <button class="addtodo-button" type="button">Create Todo</button>
-          <input class="hidden" id="todo-title" type="text" value="">
-          <button class="hidden add-todo" type="button" name="button">Add Todo</button>
+          <div class="add-div-content">
+            <input id="todo-title" type="text" value="">
+            <button class=" add-todo" type="button" name="button">Add Todo</button>
+          </div>
         </div>
         <div class="">
           <button class="cleartodo-button" type="button">Clear Todos</button>
@@ -25,16 +27,34 @@
 
       </nav>
 
-      <div class="todo-index">
-        <ul class="todo-list">
+      <div class="content">
 
-          <li class="todo-item">
-            <h1 class="todo-title"> Clean Room </h1>
-            <button class="subtask-button" type="button">SUBTASKS</button>
-          </li>
+        <div class="todo-index">
+          <ul class="todo-list">
 
-        </ul>
+            <li class="todo-item"  key="0">
+              <h1 class="todo-title"> Finish fc report </h1>
+              <button class="subtask-button" key="0" type="button">SUBTASKS</button>
+            </li>
 
+            <li class="todo-item">
+              <h1 class="todo-title"> Prepare speech </h1>
+              <button class="subtask-button" key="1" type="button">SUBTASKS</button>
+            </li>
+
+            <li class="todo-item">
+              <h1 class="todo-title"> Get groceries </h1>
+              <button class="subtask-button" key="2" type="button">SUBTASKS</button>
+            </li>
+
+          </ul>
+
+        </div>
+        <div class="subtasks-index">
+          <div class="subtasks">
+            
+          </div>
+        </div>
       </div>
 
     </div>
