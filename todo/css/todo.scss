@@ -3,6 +3,9 @@ html, body{
   margin: 0;
   padding: 0;
 }
+ul {
+  padding: 0;
+}
 body{
   height: 2000px;
 }
@@ -48,7 +51,7 @@ h1{
 .todo-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .hidden {
@@ -68,4 +71,12 @@ h1{
 
 .subtasks-ul {
     color: white;
+    margin-top: 40px;
+}
+.title-div {
+  display: flex;
+}
+
+.fa {
+  color: #E9E581;
 }

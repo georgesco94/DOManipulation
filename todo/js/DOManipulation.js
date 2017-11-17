@@ -40,6 +40,10 @@ $d(()=>{
   });
 
 $d('.todo-list').on('click' , (e) => {
+  if($d(e.target).attr('class')[0] === 'f'){
+    $d(e.target).parent().parent().remove();
+    return;
+  }
   let idx = parseInt($d(e.target).attr('key'));
   const substasks = $d('.subtasks');
   substasks.empty();
@@ -53,19 +57,16 @@ $d('.todo-list').on('click' , (e) => {
   substasks.append(subtasksUl);
 });
 
+$d('.todo-list').on('mouseover', (e) => {
+  if($d(e.target).attr('class')[0] === 'f') {
+    e.target.style.color = 'red';
+  }
+});
+$d('.todo-list').on('mouseout', (e) => {
+  if($d(e.target).attr('class')[0] === 'f') {
+    e.target.style.color = '#E9E581';
+  }
+});
 
-  // $d(".subtask-button").on("click", (e) => {
-  //   debugger
-  //   let idx = parseInt($d(e.target).attr('key'));
-  //   const substasks = $d('.subtasks');
-  //   substasks.empty();
-  //   const subtasksUl = $d('<ul>');
-  //   subtasksUl.addClass('subtasks-ul');
-  //   subtasksArray[idx].forEach((subt) => {
-  //     const subLi = $d('<li>');
-  //     subLi.append(subt);
-  //     subtasksUl.append(subLi);
-  //   });
-  //   substasks.append(subtasksUl);
-  // });
+
 });
