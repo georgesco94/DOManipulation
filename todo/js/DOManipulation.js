@@ -21,12 +21,27 @@ $d(()=>{
     const todoList = $d(".todo-list");
     const newTodo = $d("<li>");
     const todoTitle = $d("<h1>");
+    const deleteIcon = $d('<i>');
+    const titleDiv = $d('<div>');
+
+
+    titleDiv.addClass('title-div');
+    deleteIcon.addClass('fa');
+    deleteIcon.addClass('fa-times');
+    titleDiv.append(deleteIcon);
     todoTitle.addClass("todo-title");
     todoTitle.append(`${title}`);
-    newTodo.append(todoTitle);
+    titleDiv.append(todoTitle);
+
+
+    newTodo.append(titleDiv);
+
+
     const subButton = $d("<button>");
     subButton.addClass("subtask-button");
     subButton.append("SUBTASKS");
+
+
     newTodo.append(subButton);
     newTodo.addClass("todo-item");
     todoList.append(newTodo);
