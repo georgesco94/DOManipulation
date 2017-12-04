@@ -9,6 +9,9 @@ ul {
 body{
   height: 2000px;
 }
+a{
+  text-decoration: none;
+}
 
 .addTask-button {
   padding: 0;
@@ -23,6 +26,7 @@ body{
 .add-div-content {
   display: none;
   position: absolute;
+  background-color: ligthgrey;
 }
 
 h1{
@@ -35,6 +39,7 @@ h1{
   display: flex;
   justify-content:space-around;
   align-items: center;
+  font-size: 55px;
 }
 .main-content {
   width: 100%;
@@ -60,6 +65,7 @@ h1{
 
 .shown {
   display: block;
+  background-color: lightgrey;
 }
 
 .content {
@@ -79,4 +85,40 @@ h1{
 
 .fa {
   color: #E9E581;
+}
+.fa-github {
+  color: black;
+}
+.fa-briefcase {
+  color: black;
+}
+
+.intro-modal{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.9);
+}
+.fa-play {
+  color: black;
+}
+.intro-content {
+  color: #E9E581;
+  font-family: sans-serif;
+  font-size: 20px;
+  background: #2b406e;
+  display: flex;
+  flex-direction: column;
+  margin: 20% auto;
+  width: 70%;
+}
+.title {
+  margin: auto;
+}
+.play-button {
+  margin-left: auto;
+  color: black;
+  width: 7%;
 }

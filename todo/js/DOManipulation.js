@@ -1,6 +1,10 @@
 $d(()=>{
 
-
+  const playButton = $d(".play-button");
+  playButton.on('click', () => {
+    const modal = $d('.intro-modal');
+    modal.addClass('hidden');
+  });
   let subtasksArray =
   {
     0:['Add Documentation','Contact info','Format entry'],
