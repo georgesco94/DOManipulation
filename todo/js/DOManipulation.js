@@ -1,7 +1,10 @@
+/* global $d */
+
 $d(()=>{
 
   const playButton = $d(".play-button");
   playButton.on('click', () => {
+
     const modal = $d('.intro-modal');
     modal.addClass('hidden');
   });
@@ -20,6 +23,7 @@ $d(()=>{
   });
 
   $d(".add-todo").on("click", () => {
+
     const inp = $d("#todo-title");
     const title = inp.array[0].value;
     const todoList = $d(".todo-list");
