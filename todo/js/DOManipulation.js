@@ -112,6 +112,7 @@ $d(()=>{
 
     newTodo.append(subButton);
     newTodo.addClass("todo-item");
+    if(isDark) newTodo.addClass('dark');
     todoList.append(newTodo);
     const addContent = $d(".add-div-content");
     addContent.removeClass("shown");
@@ -120,7 +121,6 @@ $d(()=>{
   function createButton(key){
     const subButton = $d("<button>");
     subButton.addClass("subtask-button");
-    if (isDark) subButton.addClass("dark");
     subButton.attr('key',key);
     subButton.append("SUBTASKS");
     return subButton;
