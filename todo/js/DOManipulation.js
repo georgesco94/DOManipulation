@@ -1,19 +1,34 @@
 /* global $d */
 
 $d(()=>{
-
-  const playButton = $d(".play-button");
-  playButton.on('click', () => {
-
-    const modal = $d('.intro-modal');
-    modal.addClass('hidden');
-  });
   let subtasksObject =
   {
     0:['Add Documentation','Contact info','Format entry'],
     1:['Talk to VPR', 'Skype Japan'],
     2:['Tomatos', 'Fruitzz']
   };
+  let isDark = false;
+  const toggleStyleButton = $d('.toggle-style-button');
+  toggleStyleButton.on('click', (e) => {
+    isDark = !isDark;
+    $d('li').toggleClass('dark');
+    $d('.todo-list').toggleClass('dark');
+    $d('.main-content').toggleClass('dark');
+  });
+
+  const playButton = $d(".play-button");
+  playButton.on('mouseover', (e) => {
+    $d(e.currentTarget).addClass('hovered-button');
+  });
+  playButton.on('mouseout', (e) => {
+    $d(e.currentTarget).removeClass('hovered-button');
+  });
+
+  playButton.on('click', () => {
+
+    const modal = $d('.intro-modal');
+    modal.addClass('hidden');
+  });
 
 
   $d(".create-button").on("click", () => {
@@ -105,6 +120,7 @@ $d(()=>{
   function createButton(key){
     const subButton = $d("<button>");
     subButton.addClass("subtask-button");
+    if (isDark) subButton.addClass("dark");
     subButton.attr('key',key);
     subButton.append("SUBTASKS");
     return subButton;

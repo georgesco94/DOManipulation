@@ -12,7 +12,17 @@ body{
 a{
   text-decoration: none;
 }
+button:active,
+button:hover,
+button:focus{
+  border: none;
+  outline: none;
+}
 
+.hovered-button {
+  color:red;
+  background: black;
+}
 .addTask-button {
   padding: 0;
   margin: auto;
@@ -35,6 +45,7 @@ h1{
   justify-content:space-around;
   align-items: center;
   font-size: 55px;
+  padding: 5px;
 }
 .main-content {
   width: 100%;
@@ -95,9 +106,7 @@ h1{
   z-index: 1;
   background-color: rgba(0,0,0,0.9);
 }
-.fa-play {
-  color: black;
-}
+
 .intro-content {
   color: #E9E581;
   font-family: sans-serif;
@@ -105,8 +114,12 @@ h1{
   background: #2b406e;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 20% auto;
   width: 70%;
+  border-radius: 8px;
+  padding: 7px;
 }
 .title {
   margin: auto;
@@ -135,4 +148,18 @@ h1{
   height: auto;
   display: flex;
   flex-direction: column;
+}
+
+.dark{
+  background: #1A1A1D;
+}
+.dark > li {
+  background: #C3073F;
+}
+
+
+.dark > button {
+  border: none;
+  background: #6F2232;
+  color: white;
 }
