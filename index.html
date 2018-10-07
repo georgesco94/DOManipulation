@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="./todo/css/todo.css" >
-    <script src="./lib/domanipulation.js" type="text/javascript"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="./lib/dom_node_collection.js" type="text/javascript"> </script>
+    <script src="./lib/main.js" type="text/javascript"> </script>
     <script src="./todo/js/DOManipulation.js"> </script>
     <script src="https://use.fontawesome.com/46ecd45468.js"></script>
   </head>
@@ -23,10 +26,14 @@
     <div class="main-content">
       <nav class="nav-bar">
         <div class="add-div">
-          <button class="addtodo-button" type="button">Create Todo</button>
-          <div class="add-div-content">
-            <input id="todo-title" type="text" value="">
-            <button class=" add-todo" type="button" name="button">Add Todo</button>
+          <button class="create-button" type="button">Create Todo</button>
+          <div class="add-div-content hidden">
+            <div class="todo-form">
+              <input id="todo-title" type="text" value="">
+              <input id="todo-new-task" type="text" value="Task">
+              <input id="todo-new-task" type="text" value="Task">
+              <button class=" add-todo" type="button" name="button">Add Todo</button>
+            </div>
           </div>
         </div>
 
@@ -60,7 +67,7 @@
               <button class="subtask-button" key="0" type="button">SUBTASKS</button>
             </li>
 
-            <li class="todo-item">
+            <li class="todo-item" key="1">
               <div class="title-div">
                 <i class="fa fa-times" aria-hidden="true"></i>
                 <h1 class="todo-title"> Prepare speech </h1>
@@ -68,7 +75,7 @@
               <button class="subtask-button" key="1" type="button">SUBTASKS</button>
             </li>
 
-            <li class="todo-item">
+            <li class="todo-item" key="2">
               <div class="title-div">
                 <i class="fa fa-times" aria-hidden="true"></i>
                 <h1 class="todo-title"> Get groceries </h1>
