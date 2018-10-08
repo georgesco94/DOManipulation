@@ -12,6 +12,9 @@ body{
 a{
   text-decoration: none;
 }
+label{
+  font-size: 35px;
+}
 button:active,
 button:hover,
 button:focus{
@@ -81,8 +84,8 @@ h1{
 }
 
 .subtasks-ul {
-    color: white;
-    margin-top: 40px;
+  color: white;
+  margin-top: 40px;
 }
 .title-div {
   display: flex;
@@ -145,9 +148,13 @@ h1{
   background: white;
   min-width: 440px;
   min-height: 300px;
+  padding: 6px;
   height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
 }
 
 .dark{
@@ -157,6 +164,18 @@ h1{
   background: #C3073F;
 }
 
+.add-todo{
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 4px;
+}
+
+.add-todo-button{
+  background: #337ab7;
+  width: 40px;
+  height: 40px;
+}
 
 .dark > button {
   border: none;

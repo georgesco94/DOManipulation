@@ -8,6 +8,7 @@ $d(()=>{
     2:['Tomatos', 'Fruitzz']
   };
   let isDark = false;
+
   const toggleStyleButton = $d('.toggle-style-button');
   toggleStyleButton.on('click', (e) => {
     isDark = !isDark;
@@ -42,6 +43,10 @@ $d(()=>{
 
     const tasks = $d("#todo-new-task");
     addTodo( title,tasks );
+    inp.array[0].value = 'value';
+    tasks.array.forEach(task => {
+      task.value='task';
+    });
   });
 
   $d(".cleartodo-button").on("click", () => {
