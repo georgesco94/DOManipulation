@@ -5,7 +5,7 @@ $d(()=>{
   {
     0:['Add Documentation','Contact info','Format entry'],
     1:['Talk to VPR', 'Skype Japan'],
-    2:['Tomatos', 'Fruitzz']
+    2:['Apples', 'Fruits']
   };
   let isDark = false;
 
