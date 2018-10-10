@@ -61,16 +61,17 @@ $d(()=>{
       $d(e.target).parent().parent().remove();
       return;
     }
-
-    let idx = parseInt($d(e.target).attr('key'));
-    const subtasksUl = $d('<ul>');
-    subtasksUl.addClass('subtasks-ul');
-    subtasksObject[idx].forEach((subt) => {
-      const subLi = $d('<li>');
-      subLi.append(subt);
-      subtasksUl.append(subLi);
-    });
-    substasks.append(subtasksUl);
+    if($d(e.target).is('BUTTON')){
+      let idx = parseInt($d(e.target).attr('key'));
+      const subtasksUl = $d('<ul>');
+      subtasksUl.addClass('subtasks-ul');
+      subtasksObject[idx].forEach((subt) => {
+        const subLi = $d('<li>');
+        subLi.append(subt);
+        subtasksUl.append(subLi);
+      });
+      substasks.append(subtasksUl);
+    }
   });
 
   $d('.todo-list').on('mouseover', (e) => {
